@@ -1,0 +1,137 @@
+.mission-section {
+  position: relative;
+  padding: 100px 20px;
+  background: #0f172a;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+/* Animated Gradient Background */
+.gradient-bg {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, #3b82f6, #9333ea);
+  filter: blur(200px);
+  opacity: 0.25;
+  top: -200px;
+  left: -200px;
+  animation: floatBg 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 50px); }
+}
+
+.mission-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mission-card {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  background: rgba(14, 173, 201, 0.443);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transition: 0.4s ease;
+  perspective: 1000px;
+}
+
+.mission-left {
+  flex: 1;
+  text-align: left;
+}
+
+.mission-left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  border-radius: 4px;
+}
+
+.mission-right {
+  flex: 2;
+  text-align: left;
+}
+
+.mission-right p {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.stat {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.stat span {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat p {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #94a3b8;
+}
+
+.nav-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  transform: scale(1.1);
+}
+
+.left {
+  margin-right: 30px;
+}
+
+.right {
+  margin-left: 30px;
+}
