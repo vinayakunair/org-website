@@ -1,7 +1,7 @@
 .mission-section {
   position: relative;
   padding: 100px 20px;
-  background: #0f172a;
+  background: #87cefa;
   overflow: hidden;
   color: white;
   text-align: center;
@@ -48,9 +48,9 @@
   padding: 50px;
   border-radius: 24px;
   backdrop-filter: blur(20px);
-  background: rgba(14, 173, 201, 0.443);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: rgba(14, 164, 201, 0.443);
+  border: 1px solid rgba(255, 255, 255, 0.461);
+  box-shadow: 0 20px 60px rgba(6, 37, 72, 0.5);
   transition: 0.4s ease;
   perspective: 1000px;
 }
@@ -79,7 +79,7 @@
 
 .mission-right p {
   margin-bottom: 15px;
-  color: #cbd5e1;
+  color: white;
   line-height: 1.6;
 }
 
@@ -108,7 +108,7 @@
 .stat p {
   font-size: 14px;
   margin-top: 6px;
-  color: #94a3b8;
+  color: white;
 }
 
 .nav-btn {

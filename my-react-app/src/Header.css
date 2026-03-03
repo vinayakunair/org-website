@@ -5,12 +5,16 @@
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
-    background: linear-gradient(90deg, #142a3d 0%, #1f3a52 100%);
-    min-height: 80px;
+    background: linear-gradient(90deg, #0f172a 0%, #0f172a 50%, #0f172a 100%);
+    min-height: 65px;
     padding: 0px 48px;
-    color: white;
-    
+    color: white;  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+    
+    
 
 .logo{
     display: flex;
@@ -24,7 +28,7 @@
 }
 
 .logo img{
-    height: 45px;
+    height: 35px;
     max-height: 100%;
     object-fit: contain;
     
@@ -44,4 +48,9 @@
 .nav a {
     color: white;
     text-decoration: none;
+}
+
+.navtext:hover{
+   
+  color: #3B82F6
 }
