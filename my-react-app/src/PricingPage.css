@@ -197,3 +197,65 @@
 .choose-btn:hover {
   background: #166c2f;
 }
+
+
+/* Position top right */
+.top-right-controls {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Button */
+.dropdown-btn {
+  background: #f4f6f8;
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-btn:hover {
+  background: #eaeef3;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 170px;
+  padding: 8px;
+  z-index: 10;
+}
+
+/* Items */
+.dropdown-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item.active {
+  font-weight: 600;
+  color: #ff7a00;
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./PricingPage.css";
 
@@ -61,11 +61,100 @@ const plans = [
   },
 ];
 
+
+
+
+
 export default function PricingPage() {
   const [billing, setBilling] = useState("monthly");
+  const [accountType, setAccountType] = useState("Individual");
+  const [country, setCountry] = useState("India");
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+
+  
 
   return (
     <div className="pricing-container">
+        <div className="top-right-controls" ref={dropdownRef}>
+
+  {/* Account Type Dropdown */}
+  <div className="dropdown">
+    <button
+      className="dropdown-btn"
+      onClick={() =>
+        setOpenDropdown(openDropdown === "account" ? null : "account")
+      }
+    >
+      {accountType} ▼
+    </button>
+
+    {openDropdown === "account" && (
+      <div className="dropdown-menu">
+        <div
+          className="dropdown-item"
+          onClick={() => {
+            setAccountType("Individual");
+            setOpenDropdown(null);
+          }}
+        >
+          Individual
+        </div>
+
+        <div
+          className="dropdown-item active"
+          onClick={() => {
+            setAccountType("Organisation");
+            setOpenDropdown(null);
+          }}
+        >
+          Organisation ✓
+        </div>
+      </div>
+    )}
+  </div>
+
+  {/* Country Dropdown */}
+  <div className="dropdown">
+    <button
+      className="dropdown-btn"
+      onClick={() =>
+        setOpenDropdown(openDropdown === "country" ? null : "country")
+      }
+    >
+      🇮🇳 {country} ▼
+    </button>
+
+    {openDropdown === "country" && (
+      <div className="dropdown-menu">
+        <div
+          className="dropdown-item active"
+          onClick={() => {
+            setCountry("India");
+            setOpenDropdown(null);
+          }}
+        >
+          🇮🇳 India
+        </div>
+      </div>
+    )}
+  </div>
+
+</div>
       <div className="pricing-header">
         <h1>Choose Your Plan</h1>
         <p>Unlock premium features tailored for students & achievers.</p>
